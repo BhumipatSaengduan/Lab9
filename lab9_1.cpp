@@ -28,7 +28,6 @@ int main() {
         double prevBalance = newBalance;
         double interest = prevBalance * (rateperY / 100);
         double total = prevBalance + interest;
-
         double payment = (total > payperY) ? payperY : total;
 
         newBalance = total - payment;
