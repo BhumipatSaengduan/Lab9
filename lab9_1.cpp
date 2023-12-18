@@ -24,7 +24,7 @@ int main() {
 
     double newBalance = loan;
 
-    for (int year = 1; newBalance > 0; ++year) {
+    for (int year = 1; newBalance > 0; year++) {
         double prevBalance = newBalance;
         double interest = prevBalance * (rateperY / 100);
         double total = prevBalance + interest;
@@ -38,7 +38,7 @@ int main() {
         cout << setw(13) << left << interest;
         cout << setw(13) << left << total;
         cout << setw(13) << left << payment;
-        cout << setw(13) << left << (newBalance < 0 ? 0.0 : newBalance);  
+        cout << setw(13) << left << newBalance;  
         cout << "\n";
     }
     return 0;
